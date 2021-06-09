@@ -1,0 +1,48 @@
+
+<label class="tit"><h2>Form</h2></label>
+
+
+<div class="content">
+    
+    <form [formGroup]="districtForm">
+
+<label>
+    District Name:
+    <label class="box"><input type ='text' formControlName="DistrictName"></label>
+</label>
+<br>
+<label>
+    Area(sq.mt):
+    <label class="box"><input type ='number' formControlName="Area"></label>
+
+</label>
+
+<br>
+<label>
+    Population:
+    <label class="box"><input type ='number' formControlName="Population"></label>
+</label>
+
+</form>
+
+<form [formGroup]="districtForm"(ngSubmit)="onSubmit()"></form>
+
+<button class ="button button1">Save</button>
+
+
+    
+    
+    <div class="radio-container">
+        <h4>  Biggest District(Area wise)</h4>
+    <label class="radio-inline"> <input type="radio" name='radio' unchecked >Chennai</label>
+    <label class="radio-inline"> <input type="radio" name='radio' checked >Coimbatore</label>
+    <label class="radio-inline"> <input type="radio" name='radio' unchecked >Salem</label>
+</div> 
+    <div class="radio-container">
+        <h4>  Highly populated District</h4>
+    <label class="radio-inline" > <input type="radio" name='radio1' checked >Chennai</label>
+    <label class="radio-inline"> <input type="radio" name='radio1' unchecked >Coimbatore</label>
+    <label class="radio-inline"> <input type="radio" name='radio1' unchecked >Salem</label>
+</div> 
+
+</div>
